@@ -4,18 +4,14 @@ RUN apk update && apk add --no-cache git build-base libjpeg-turbo-dev libwebp-de
 
 WORKDIR /build
 
-# Copiar apenas arquivos de dependências primeiro para cachear o download
-COPY go.mod go.sum ./
+# Copiar todo o código fonte
+COPY . .
 
 # Clonar whatsmeow-lib (submodule não é inicializado pelo Railway)
 RUN git clone --depth=1 https://github.com/EvolutionAPI/whatsmeow.git ./whatsmeow-lib
 
-# Agora fazer download das dependências (com replace funcionando)
+# Baixar dependências e compilar
 RUN go mod download
-
-# Copiar o restante do código
-COPY . .
-
 ARG VERSION=dev
 RUN CGO_ENABLED=1 go build -ldflags "-X main.version=${VERSION}" -o server ./cmd/evolution-go
 

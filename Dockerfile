@@ -7,15 +7,8 @@ WORKDIR /build
 # Copiar apenas arquivos de dependências primeiro para cachear o download
 COPY go.mod go.sum ./
 
-# Copiar whatsmeow-lib que é uma dependência local
-COPY whatsmeow-lib/ ./whatsmeow-lib/
-
-# Se whatsmeow-lib estiver vazio (submodule não inicializado), clonar diretamente
-RUN if [ ! -f "./whatsmeow-lib/go.mod" ]; then \
-      echo "whatsmeow-lib vazio, clonando..."; \
-      rm -rf ./whatsmeow-lib; \
-      git clone --depth=1 https://github.com/EvolutionAPI/whatsmeow.git ./whatsmeow-lib; \
-    fi
+# Clonar whatsmeow-lib (submodule não é inicializado pelo Railway)
+RUN git clone --depth=1 https://github.com/EvolutionAPI/whatsmeow.git ./whatsmeow-lib
 
 # Agora fazer download das dependências (com replace funcionando)
 RUN go mod download

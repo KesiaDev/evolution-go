@@ -7,6 +7,7 @@ WORKDIR /build
 # Copiar todo o código fonte
 COPY . .
 
+# v5 - sem go mod download, build direto com -mod=mod
 # Clonar whatsmeow-lib (submodule não é inicializado pelo Railway)
 RUN git clone --depth=1 https://github.com/EvolutionAPI/whatsmeow.git ./whatsmeow-lib
 

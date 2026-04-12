@@ -1,0 +1,14 @@
+[phases.setup]
+nixPkgs = ["go_1_23", "git", "gcc"]
+
+[phases.install]
+cmds = [
+  "if [ ! -f ./whatsmeow-lib/go.mod ]; then git clone --depth=1 https://github.com/EvolutionAPI/whatsmeow.git ./whatsmeow-lib; fi",
+  "go mod download"
+]
+
+[phases.build]
+cmds = ["go build -o /app/server ./cmd/evolution-go"]
+
+[start]
+cmd = "/app/server"

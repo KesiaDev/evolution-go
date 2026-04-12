@@ -10,10 +10,9 @@ COPY . .
 # Clonar whatsmeow-lib (submodule não é inicializado pelo Railway)
 RUN git clone --depth=1 https://github.com/EvolutionAPI/whatsmeow.git ./whatsmeow-lib
 
-# Baixar dependências e compilar
-RUN go mod download
+# Compilar (go build baixa dependências automaticamente com -mod=mod)
 ARG VERSION=dev
-RUN CGO_ENABLED=1 go build -ldflags "-X main.version=${VERSION}" -o server ./cmd/evolution-go
+RUN CGO_ENABLED=1 go build -mod=mod -ldflags "-X main.version=${VERSION}" -o server ./cmd/evolution-go
 
 FROM alpine:3.19.1 AS final
 

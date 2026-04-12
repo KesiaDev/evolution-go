@@ -1,5 +1,4 @@
-module github.com/EvolutionAPI/evolution-go
-
+module github.com/KesiaDev/evolution-go
 go 1.25.0
 
 require (

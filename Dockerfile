@@ -4,16 +4,16 @@ RUN apk update && apk add --no-cache git build-base libjpeg-turbo-dev libwebp-de
 
 WORKDIR /build
 
-# Copiar todo o código fonte
 COPY . .
 
-# v5 - sem go mod download, build direto com -mod=mod
+# Debug: verificar se go.mod foi copiado
+RUN echo "=== ls /build ===" && ls -la /build | head -20 && echo "=== go.mod ===" && cat /build/go.mod | head -3
+
 # Clonar whatsmeow-lib (submodule não é inicializado pelo Railway)
 RUN git clone --depth=1 https://github.com/EvolutionAPI/whatsmeow.git ./whatsmeow-lib
 
-# Compilar (go build baixa dependências automaticamente com -mod=mod)
 ARG VERSION=dev
-RUN CGO_ENABLED=1 go build -mod=mod -ldflags "-X main.version=${VERSION}" -o server ./cmd/evolution-go
+RUN cd /build && CGO_ENABLED=1 go build -mod=mod -ldflags "-X main.version=${VERSION}" -o server ./cmd/evolution-go
 
 FROM alpine:3.19.1 AS final
 

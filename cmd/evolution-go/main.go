@@ -64,6 +64,7 @@ user_handler "github.com/KesiaDev/evolution-go/pkg/user/handler"
 user_service "github.com/KesiaDev/evolution-go/pkg/user/service"
 whatsmeow_service "github.com/KesiaDev/evolution-go/pkg/whatsmeow/service"
 amqp "github.com/rabbitmq/amqp091-go"
+)
 
 var devMode = flag.Bool("dev", false, "Enable development mode")
 

@@ -1,4 +1,4 @@
-module github.com/KesiaDev/evolution-go
+module github.com/EvolutionAPI/evolution-go
 
 go 1.25.0
 

@@ -100,4 +100,4 @@ require (
 	modernc.org/token v1.1.0 // indirect
 )
 
-
+replace go.mau.fi/whatsmeow => ./whatsmeow-lib

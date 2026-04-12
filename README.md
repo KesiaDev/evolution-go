@@ -5,7 +5,8 @@
 [![Docker Image](https://img.shields.io/badge/Docker-image-blue)](https://hub.docker.com/r/evoapicloud/evolution-go)
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue)](./LICENSE)
 [![Go Version](https://img.shields.io/badge/Go-1.24+-00ADD8?logo=go)](https://golang.org/)
-[![GitHub Stars](https://img.shields.io/github/stars/EvolutionAPI/evolution-go)](https://github.com/EvolutionAPI/evolution-go/stargazers)
+[![GitHub Stars](https://img.shields.io/github/stars/EvolutionAPI/evolution-go)](https:// github.com/EvolutionAPI/evolution-go
+ [github.com/KesiaDev/evolution-go]/stargazers)
 [![Documentation](https://img.shields.io/badge/Documentation-Official-green)](https://docs.evolutionfoundation.com.br)
 
 </div>
@@ -32,7 +33,8 @@ Evolution Go is a high-performance WhatsApp API built in Go, part of the [Evolut
 ### Docker (Recommended)
 
 ```bash
-git clone https://github.com/EvolutionAPI/evolution-go.git
+git clone https:// github.com/EvolutionAPI/evolution-go
+ [github.com/KesiaDev/evolution-go].git
 cd evolution-go
 make docker-build
 make docker-run
@@ -41,7 +43,9 @@ make docker-run
 ### Local Development
 
 ```bash
-git clone https://github.com/EvolutionAPI/evolution-go.git
+git clone https://🔍  github.com/EvolutionAPI/evolution-go
+ [github.com/KesiaDev/evolution-go]
+🔁 [CAMPO NOVO AQUI].git
 cd evolution-go
 
 # Clone whatsmeow dependency
@@ -169,7 +173,9 @@ evolution-go/
 | Documentation | [docs.evolutionfoundation.com.br](https://docs.evolutionfoundation.com.br/) |
 | Community | [evolutionfoundation.com.br/community](https://evolutionfoundation.com.br/community) |
 | WhatsApp Support | [+55 31 7503-8350](https://wa.me/553175038350) |
-| GitHub Issues | [evolution-go/issues](https://github.com/EvolutionAPI/evolution-go/issues) |
+| GitHub Issues | [evolution-go/issues](https://  github.com/EvolutionAPI/evolution-go
+ [github.com/KesiaDev/evolution-go]
+ [github.com/KesiaDev/evolution-go]/issues) |
 
 ## Hosting
 

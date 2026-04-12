@@ -227,7 +227,8 @@
 
 - **Docker Hub**: `evoapicloud/evolution-go`
 - **Documentation**: Swagger available at `/swagger/`
-- **GitHub**: [Evolution API Go](https://github.com/EvolutionAPI/evolution-go)
+- **GitHub**: [Evolution API Go](https:// github.com/EvolutionAPI/evolution-go
+ [github.com/KesiaDev/evolution-go])
 
 ---
 

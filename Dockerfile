@@ -13,6 +13,9 @@ RUN git clone --depth=1 https://github.com/EvolutionAPI/whatsmeow.git ./whatsmeo
 # Verificar que go.mod está presente
 RUN ls go.mod go.sum
 
+# Atualizar go.sum para refletir dependências atuais do whatsmeow
+RUN go mod tidy
+
 ARG VERSION=dev
 RUN CGO_ENABLED=1 go build -ldflags "-X main.version=${VERSION}" -o server ./cmd/evolution-go
 
